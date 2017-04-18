@@ -2,6 +2,7 @@ title: Hello world, hello bug, hello issues!
 tags:
     - meta-post
 date: 2017-04-18 00:10:00
+toc: false
 ---
 
 Olá, resolvi fazer esse blog para escrever sobre diversas soluções em programação que encontro no meu dia a dia, o objetivo é ter esse acervo para consultas futuras e também ajudar outras pessoas que também tenham o problema em questão.
