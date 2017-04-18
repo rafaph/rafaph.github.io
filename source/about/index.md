@@ -1,10 +1,9 @@
 title: Sobre
-date: 2016-10-23 23:47:22
+date: 2017-04-18 18:52:22
 ---
-Olá! Meu nome é Talysson, tenho 24 anos, e no meio tempo entre criar trocadilhos ruins eu trabalho como desenvoledor na [Codeminer42](http://codeminer42.com/).
+Olá, meu nome é Raphael, sou formado desde de 2015 em ciência da computação pela Universidade Federal de Alfenas - MG.
+Durante o curso, fiz estágio na Pró-Reitoria de Pesquisa e Pós-Graduação (PRPPG) da universidade, onde desenvolvi o
+meu primeiro projeto web. Desde então me aprofundei mais no assunto e hoje sou desenvolvedor web fullstack na empresa
+[Simworx](http://www.simworx.com.br/) localizada em Campinas - SP.
 
-Gosto bastante de JavaScript, novas tecnologias para desenvolvimento, ReactJS, aplicações isomórficas/universais e desenvolvimento ágil.
-
-Você consegue me encontrar no [GitHub](https://github.com/talyssonoc), no [Twitter](http://twitter.com/talyssonoc) e no [LinkedIn](https://www.linkedin.com/in/talyssonoc/). :)
-
-Estou sempre afim de conversar sobre desenvolvimento web e novas tecnologias!
+Atualmente as linguagens que lido no dia a dia são Python, C++ e JavaScript.
