@@ -91,54 +91,20 @@
     <div class="article-content">
         
         <p>Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
-apresento é o <a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">Pyenv</a>.</p>
+apresento é o <a href="https://github.com/pyenv/pyenv">Pyenv</a>.</p>
 <p>O mais interessente do Pyenv é que ele não é apenas um gerenciador de versões do python, o
-<a href="https://github.com/pyenv/pyenv-installer" target="_blank" rel="external">pacote completo</a> ainda permite gerenciar inclusive virtualenvs.</p>
+<a href="https://github.com/pyenv/pyenv-installer">pacote completo</a> ainda permite gerenciar inclusive virtualenvs.</p>
 <p>Para quem não é do python, um virtualenv é um ambiente isolado python, onde você pode controlar todas as dependências
 do mesmo.</p>
 <p>Vamos ao que interessa:</p>
 <h4 id="instalando-o-pyenv">Instalando o Pyenv</h4>
 <p>Execute a seguinte linha no seu terminal com o seu usuário normal:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash</div></pre></td></tr></table></figure>
-<p>Adicione as seguintes linhas ao seu <code>~/.bashrc</code>:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/.pyenv/bin:<span class="variable">$PATH</span>"</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv virtualenv-init -)</span>"</span></div></pre></td></tr></table></figure>
-<h4 id="gerenciando-versões-do-python">Gerenciando versões do python</h4>
-<h5 id="instalar">Instalar</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv install 2.7.5</div></pre></td></tr></table></figure>
-<p>No exemplo, basta trocar <code>2.7.5</code> pela versão desejada.</p>
-<h5 id="remover">Remover</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall 2.7.5</div></pre></td></tr></table></figure>
-<h4 id="gerenciando-virtualenvs">Gerenciando virtualenvs:</h4>
-<h5 id="criar">Criar</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv virtualenv 2.7.5 venv</div></pre></td></tr></table></figure>
-<p>No exemplo, cria-se um virtualenv com o nome <code>venv</code> com a versão <code>2.7.5</code> do python.</p>
-<h5 id="ativar">Ativar</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv activate venv</div></pre></td></tr></table></figure>
-<p>No exemplo, ativa-se o virtualenv do nome <code>venv</code>.</p>
-<h5 id="desativar">Desativar</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv deactivate</div></pre></td></tr></table></figure>
-<h5 id="remover-v2">Remover</h5>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall venv</div></pre></td></tr></table></figure>
-<p>Bem simples, né?</p>
-<p>Para mais comandos, basta digitar <code>pyenv help</code> no seu terminal que será exibido uma lista com todos os comandos
-disponíveis do pyenv.</p>
-<p>Links úteis:</p>
-<ul>
-<li>
-<p>Pyenv: <a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">https://github.com/pyenv/pyenv</a></p>
-</li>
-<li>
-<p>Pyenv installer: <a href="https://github.com/pyenv/pyenv-installer" target="_blank" rel="external">https://github.com/pyenv/pyenv-installer</a></p>
-</li>
-<li>
-<p>Caso tenha algum problema na instalação do pyenv ou de alguma versão do python: <a href="https://github.com/pyenv/pyenv/wiki/Common-build-problems" target="_blank" rel="external">https://github.com/pyenv/pyenv/wiki/Common-build-problems</a></p>
-</li>
-</ul>
-<p>Qualquer dúvida, podem dizer nos comentários que terei o prazer de ajudar!</p>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash</div></pre></td></tr></table></figure>
         
         
         <p class="article-more-link">
+          
+            <a href="/2017/04/18/gerenciando-versoes-do-python-com-o-pyenv/#more">Continue lendo »</a>
           
        </p>
     </div>
