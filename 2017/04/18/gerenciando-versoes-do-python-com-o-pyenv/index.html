@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello world, hello bug, hello issues! | Raphael Castro</title>
+    <title>Gerenciando versões do python com o pyenv | Raphael Castro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Raphael">
     
 
     
-    <meta name="description" content="Olá, resolvi fazer esse blog para escrever sobre diversas soluções em programação que encontro no meu dia a dia, o objetivo é ter esse acervo para consultas futuras e também ajudar outras pessoas que">
+    <meta name="description" content="Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
+apresento é o Pyenv.
+O mais interessente do Pyenv é que ele não é apenas um ger">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello world, hello bug, hello issues!">
-<meta property="og:url" content="https://rafaph.github.io/2017/04/18/hello-world-hello-bug-hello-issues/index.html">
+<meta property="og:title" content="Gerenciando versões do python com o pyenv">
+<meta property="og:url" content="https://rafaph.github.io/2017/04/18/gerenciando-versoes-do-python-com-o-pyenv/index.html">
 <meta property="og:site_name" content="Raphael Castro">
-<meta property="og:description" content="Olá, resolvi fazer esse blog para escrever sobre diversas soluções em programação que encontro no meu dia a dia, o objetivo é ter esse acervo para consultas futuras e também ajudar outras pessoas que">
-<meta property="og:updated_time" content="2017-04-19T02:51:56.629Z">
+<meta property="og:description" content="Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
+apresento é o Pyenv.
+O mais interessente do Pyenv é que ele não é apenas um ger">
+<meta property="og:updated_time" content="2017-04-19T03:19:30.183Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello world, hello bug, hello issues!">
-<meta name="twitter:description" content="Olá, resolvi fazer esse blog para escrever sobre diversas soluções em programação que encontro no meu dia a dia, o objetivo é ter esse acervo para consultas futuras e também ajudar outras pessoas que">
+<meta name="twitter:title" content="Gerenciando versões do python com o pyenv">
+<meta name="twitter:description" content="Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
+apresento é o Pyenv.
+O mais interessente do Pyenv é que ele não é apenas um ger">
 
     
     <link rel="alternative" href="/atom.xml" title="Raphael Castro" type="application/atom+xml">
@@ -79,24 +85,71 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/04/18/hello-world-hello-bug-hello-issues/" title="Hello world, hello bug, hello issues!" itemprop="url">Hello world, hello bug, hello issues!</a>
+      <a href="/2017/04/18/gerenciando-versoes-do-python-com-o-pyenv/" title="Gerenciando versões do python com o pyenv" itemprop="url">Gerenciando versões do python com o pyenv</a>
   </h1>
   <p class="article-author">Por
        
 		<a href="/about" title="Raphael" target="_blank" itemprop="author">Raphael</a>
 		
   <p class="article-time">
-    <time datetime="2017-04-19T02:51:19.000Z" itemprop="datePublished"> Publicado em Apr 18 2017</time>
+    <time datetime="2017-04-19T02:56:47.000Z" itemprop="datePublished"> Publicado em Apr 18 2017</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<p>Olá, resolvi fazer esse blog para escrever sobre diversas soluções em programação que encontro no meu dia a dia, o objetivo é ter esse acervo para consultas futuras e também ajudar outras pessoas que também tenham o problema em questão.</p>
-<p>Pretendo fazer categorias divididas por linguagem ou framework. Essencialmente serão soluções web já que trabalho com web há 4 anos, mas a medida que eu tiver problemas com programação desktop também postarei.</p>
-<p>A ideia é postar algo que você não encontre de cara numa simples busca pelo google ou esteja confuso.</p>
-<p>Também pretendo postar tutoriais ensinando a lidar com determinadas tecnologias, seja web ou desktop.</p>
-<p>Até breve e espero que esse blog possa pelo menos te auxiliar.</p>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Conteúdo</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#instalando-o-pyenv"><span class="toc-number">1.</span> <span class="toc-text">Instalando o Pyenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-versões-do-python"><span class="toc-number">2.</span> <span class="toc-text">Gerenciando versões do python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#instalar"><span class="toc-number">2.1.</span> <span class="toc-text">Instalar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover"><span class="toc-number">2.2.</span> <span class="toc-text">Remover:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-virtualenvs"><span class="toc-number">3.</span> <span class="toc-text">Gerenciando virtualenvs:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#criar"><span class="toc-number">3.1.</span> <span class="toc-text">Criar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ativar"><span class="toc-number">3.2.</span> <span class="toc-text">Ativar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#desativar"><span class="toc-number">3.3.</span> <span class="toc-text">Desativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover-v2"><span class="toc-number">3.4.</span> <span class="toc-text">Remover</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<p>Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
+apresento é o <a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">Pyenv</a>.</p>
+<p>O mais interessente do Pyenv é que ele não é apenas um gerenciador de versões do python, o
+<a href="https://github.com/pyenv/pyenv-installer" target="_blank" rel="external">pacote completo</a> ainda permite gerenciar inclusive virtualenvs.</p>
+<p>Para quem não é do python, um virtualenv é um ambiente isolado python, onde você pode controlar todas as dependências
+do mesmo.</p>
+<p>Vamos ao que interessa:</p>
+<h4 id="instalando-o-pyenv">Instalando o Pyenv</h4>
+<p>Execute a seguinte linha no seu terminal com o seu usuário normal:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash</div></pre></td></tr></table></figure>
+<p>Adicione as seguintes linhas ao seu <code>~/.bashrc</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/.pyenv/bin:<span class="variable">$PATH</span>"</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv virtualenv-init -)</span>"</span></div></pre></td></tr></table></figure>
+<h4 id="gerenciando-versões-do-python">Gerenciando versões do python</h4>
+<h5 id="instalar">Instalar:</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv install 2.7.5</div></pre></td></tr></table></figure>
+<p>No exemplo, basta trocar <code>2.7.5</code> pela versão desejada.</p>
+<h5 id="remover">Remover:</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall 2.7.5</div></pre></td></tr></table></figure>
+<h4 id="gerenciando-virtualenvs">Gerenciando virtualenvs:</h4>
+<h5 id="criar">Criar</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv virtualenv 2.7.5 venv</div></pre></td></tr></table></figure>
+<p>No exemplo, cria-se um virtualenv com o nome <code>venv</code> com a versão <code>2.7.5</code> do python.</p>
+<h5 id="ativar">Ativar:</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv activate venv</div></pre></td></tr></table></figure>
+<p>No exemplo, ativa-se o virtualenv do nome <code>venv</code>.</p>
+<h5 id="desativar">Desativar</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv deactivate</div></pre></td></tr></table></figure>
+<h5 id="remover-v2">Remover</h5>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall venv</div></pre></td></tr></table></figure>
+<p>Bem simples, né?</p>
+<p>Para mais comandos, basta digitar <code>pyenv help</code> no seu terminal que será exibido uma lista com todos os comandos
+disponíveis do pyenv.</p>
+<p>Links úteis:</p>
+<ul>
+<li>
+<p>Caso tenha algum problema na instalação do pyenv ou de alguma versão do python: https://github.com/pyenv/pyenv/wiki/Common-build-problems</p>
+</li>
+<li>
+<p>Pyenv: https://github.com/pyenv/pyenv</p>
+</li>
+<li>
+<p>Pyenv installer: https://github.com/pyenv/pyenv-installer</p>
+</li>
+</ul>
+<p>Qualquer dúvida, podem dizer nos comentários que terei o prazer de ajudar!</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -105,7 +158,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/meta-post/">meta-post</a>
+  <span></span> <a href="/tags/python/">python</a>
   </div>
 
 </div>
@@ -114,7 +167,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://rafaph.github.io/2017/04/18/hello-world-hello-bug-hello-issues/" data-title="Hello world, hello bug, hello issues! | Raphael Castro" data-tsina="null" class="share clearfix">
+	  <div data-url="https://rafaph.github.io/2017/04/18/gerenciando-versoes-do-python-com-o-pyenv/" data-title="Gerenciando versões do python com o pyenv | Raphael Castro" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -127,14 +180,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/04/18/gerenciando-versoes-do-python-com-o-pyenv/" title="Gerenciando versões do python com o pyenv">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Gerenciando versões do python com o pyenv</span>
+
+<div class="next">
+<a href="/2017/04/18/hello-world-hello-bug-hello-issues/"  title="Hello world, hello bug, hello issues!">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello world, hello bug, hello issues!
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -148,6 +201,13 @@
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="Mostrar Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Conteúdo</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#instalando-o-pyenv"><span class="toc-number">1.</span> <span class="toc-text">Instalando o Pyenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-versões-do-python"><span class="toc-number">2.</span> <span class="toc-text">Gerenciando versões do python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#instalar"><span class="toc-number">2.1.</span> <span class="toc-text">Instalar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover"><span class="toc-number">2.2.</span> <span class="toc-text">Remover:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-virtualenvs"><span class="toc-number">3.</span> <span class="toc-text">Gerenciando virtualenvs:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#criar"><span class="toc-number">3.1.</span> <span class="toc-text">Criar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ativar"><span class="toc-number">3.2.</span> <span class="toc-text">Ativar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#desativar"><span class="toc-number">3.3.</span> <span class="toc-text">Desativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover-v2"><span class="toc-number">3.4.</span> <span class="toc-text">Remover</span></a></li></ol></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Esconder Sidebar"></a></div>
@@ -276,6 +336,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
