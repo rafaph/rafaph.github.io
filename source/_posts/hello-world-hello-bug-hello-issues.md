@@ -1,7 +1,7 @@
-title: Hello world, hello bug, hello issues!
+title: 'Hello world, hello bug, hello issues!'
+date: 2017-04-18 23:51:19
 tags:
     - meta-post
-date: 2017-04-18 00:10:00
 toc: false
 ---
 
