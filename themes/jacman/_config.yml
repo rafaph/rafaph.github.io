@@ -109,7 +109,7 @@ totop: true           # if you want to scroll to top in every post set the value
 
 #### Custom Search
 google_cse: 
-  enable: true
+  enable: false
   cx: 003849958285162614778:cmtmum3yn1g  # e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.
 
 baidu_search:
