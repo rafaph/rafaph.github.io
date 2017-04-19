@@ -21,7 +21,7 @@ O mais interessente do Pyenv é que ele não é apenas um ger">
 <meta property="og:description" content="Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
 apresento é o Pyenv.
 O mais interessente do Pyenv é que ele não é apenas um ger">
-<meta property="og:updated_time" content="2017-04-19T03:19:30.183Z">
+<meta property="og:updated_time" content="2017-04-19T03:23:46.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Gerenciando versões do python com o pyenv">
 <meta name="twitter:description" content="Hoje trago uma dica bem valiosa pra quem tem dor de cabeça pra usar várias versões do python no linux. A solução que vos
@@ -101,7 +101,7 @@ O mais interessente do Pyenv é que ele não é apenas um ger">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Conteúdo</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#instalando-o-pyenv"><span class="toc-number">1.</span> <span class="toc-text">Instalando o Pyenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-versões-do-python"><span class="toc-number">2.</span> <span class="toc-text">Gerenciando versões do python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#instalar"><span class="toc-number">2.1.</span> <span class="toc-text">Instalar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover"><span class="toc-number">2.2.</span> <span class="toc-text">Remover:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-virtualenvs"><span class="toc-number">3.</span> <span class="toc-text">Gerenciando virtualenvs:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#criar"><span class="toc-number">3.1.</span> <span class="toc-text">Criar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ativar"><span class="toc-number">3.2.</span> <span class="toc-text">Ativar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#desativar"><span class="toc-number">3.3.</span> <span class="toc-text">Desativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover-v2"><span class="toc-number">3.4.</span> <span class="toc-text">Remover</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#instalando-o-pyenv"><span class="toc-number">1.</span> <span class="toc-text">Instalando o Pyenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-versões-do-python"><span class="toc-number">2.</span> <span class="toc-text">Gerenciando versões do python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#instalar"><span class="toc-number">2.1.</span> <span class="toc-text">Instalar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover"><span class="toc-number">2.2.</span> <span class="toc-text">Remover</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-virtualenvs"><span class="toc-number">3.</span> <span class="toc-text">Gerenciando virtualenvs:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#criar"><span class="toc-number">3.1.</span> <span class="toc-text">Criar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ativar"><span class="toc-number">3.2.</span> <span class="toc-text">Ativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#desativar"><span class="toc-number">3.3.</span> <span class="toc-text">Desativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover-v2"><span class="toc-number">3.4.</span> <span class="toc-text">Remover</span></a></li></ol></li></ol>
 		
 		</div>
 		
@@ -118,16 +118,16 @@ do mesmo.</p>
 <p>Adicione as seguintes linhas ao seu <code>~/.bashrc</code>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$HOME</span>/.pyenv/bin:<span class="variable">$PATH</span>"</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv init -)</span>"</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(pyenv virtualenv-init -)</span>"</span></div></pre></td></tr></table></figure>
 <h4 id="gerenciando-versões-do-python">Gerenciando versões do python</h4>
-<h5 id="instalar">Instalar:</h5>
+<h5 id="instalar">Instalar</h5>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv install 2.7.5</div></pre></td></tr></table></figure>
 <p>No exemplo, basta trocar <code>2.7.5</code> pela versão desejada.</p>
-<h5 id="remover">Remover:</h5>
+<h5 id="remover">Remover</h5>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv uninstall 2.7.5</div></pre></td></tr></table></figure>
 <h4 id="gerenciando-virtualenvs">Gerenciando virtualenvs:</h4>
 <h5 id="criar">Criar</h5>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv virtualenv 2.7.5 venv</div></pre></td></tr></table></figure>
 <p>No exemplo, cria-se um virtualenv com o nome <code>venv</code> com a versão <code>2.7.5</code> do python.</p>
-<h5 id="ativar">Ativar:</h5>
+<h5 id="ativar">Ativar</h5>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pyenv activate venv</div></pre></td></tr></table></figure>
 <p>No exemplo, ativa-se o virtualenv do nome <code>venv</code>.</p>
 <h5 id="desativar">Desativar</h5>
@@ -140,13 +140,13 @@ disponíveis do pyenv.</p>
 <p>Links úteis:</p>
 <ul>
 <li>
-<p>Caso tenha algum problema na instalação do pyenv ou de alguma versão do python: https://github.com/pyenv/pyenv/wiki/Common-build-problems</p>
+<p>Pyenv: <a href="https://github.com/pyenv/pyenv" target="_blank" rel="external">https://github.com/pyenv/pyenv</a></p>
 </li>
 <li>
-<p>Pyenv: https://github.com/pyenv/pyenv</p>
+<p>Pyenv installer: <a href="https://github.com/pyenv/pyenv-installer" target="_blank" rel="external">https://github.com/pyenv/pyenv-installer</a></p>
 </li>
 <li>
-<p>Pyenv installer: https://github.com/pyenv/pyenv-installer</p>
+<p>Caso tenha algum problema na instalação do pyenv ou de alguma versão do python: <a href="https://github.com/pyenv/pyenv/wiki/Common-build-problems" target="_blank" rel="external">https://github.com/pyenv/pyenv/wiki/Common-build-problems</a></p>
 </li>
 </ul>
 <p>Qualquer dúvida, podem dizer nos comentários que terei o prazer de ajudar!</p>
@@ -183,7 +183,7 @@ disponíveis do pyenv.</p>
 
 <div class="next">
 <a href="/2017/04/18/hello-world-hello-bug-hello-issues/"  title="Hello world, hello bug, hello issues!">
- <strong>下一篇：</strong><br/> 
+ <strong>Próximo：</strong><br/>
  <span>Hello world, hello bug, hello issues!
 </span>
 </a>
@@ -205,7 +205,7 @@ disponíveis do pyenv.</p>
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Conteúdo</strong>
  
- <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#instalando-o-pyenv"><span class="toc-number">1.</span> <span class="toc-text">Instalando o Pyenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-versões-do-python"><span class="toc-number">2.</span> <span class="toc-text">Gerenciando versões do python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#instalar"><span class="toc-number">2.1.</span> <span class="toc-text">Instalar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover"><span class="toc-number">2.2.</span> <span class="toc-text">Remover:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-virtualenvs"><span class="toc-number">3.</span> <span class="toc-text">Gerenciando virtualenvs:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#criar"><span class="toc-number">3.1.</span> <span class="toc-text">Criar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ativar"><span class="toc-number">3.2.</span> <span class="toc-text">Ativar:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#desativar"><span class="toc-number">3.3.</span> <span class="toc-text">Desativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover-v2"><span class="toc-number">3.4.</span> <span class="toc-text">Remover</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#instalando-o-pyenv"><span class="toc-number">1.</span> <span class="toc-text">Instalando o Pyenv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-versões-do-python"><span class="toc-number">2.</span> <span class="toc-text">Gerenciando versões do python</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#instalar"><span class="toc-number">2.1.</span> <span class="toc-text">Instalar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover"><span class="toc-number">2.2.</span> <span class="toc-text">Remover</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gerenciando-virtualenvs"><span class="toc-number">3.</span> <span class="toc-text">Gerenciando virtualenvs:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#criar"><span class="toc-number">3.1.</span> <span class="toc-text">Criar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ativar"><span class="toc-number">3.2.</span> <span class="toc-text">Ativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#desativar"><span class="toc-number">3.3.</span> <span class="toc-text">Desativar</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#remover-v2"><span class="toc-number">3.4.</span> <span class="toc-text">Remover</span></a></li></ol></li></ol>
  
   </div>
 
